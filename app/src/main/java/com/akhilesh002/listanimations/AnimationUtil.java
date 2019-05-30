@@ -10,7 +10,7 @@ public class AnimationUtil  {
         AnimatorSet animatorSet = new AnimatorSet();
 
         ObjectAnimator objectAnimatorY = ObjectAnimator.ofFloat(holder.itemView, "translationY", goesDown ? 100 : -100, 0);
-        objectAnimatorY.setDuration(400);
+        objectAnimatorY.setDuration(300);
 
 //        ObjectAnimator objectAnimatorX = ObjectAnimator.ofFloat(holder.itemView, "translationX", 10, -10, 0);
 //        objectAnimatorX.setDuration(800);

@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.view.animation.ScaleAnimation;
 import android.widget.TextView;
 
@@ -19,7 +18,7 @@ public class ListItemAdapter extends RecyclerView.Adapter<ListItemAdapter.ViewHo
 
     private LayoutInflater inflater;
     private ArrayList<ListItem> listItems;
-    int previousPosition = -2;
+    private int previousPosition = -2;
 
     public ListItemAdapter(Context cxt, ArrayList<ListItem> listItems){
         inflater = LayoutInflater.from(cxt);
@@ -47,11 +46,10 @@ public class ListItemAdapter extends RecyclerView.Adapter<ListItemAdapter.ViewHo
         }
         previousPosition = i;
 
-        ScaleAnimation fade_in = new ScaleAnimation(0.85f, 1f, 0.85f, 1f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-        fade_in.setDuration(400);
+        ScaleAnimation fade_in = new ScaleAnimation(0.90f, 1f, 0.90f, 1f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        fade_in.setDuration(300);
         fade_in.setFillAfter(true);
         viewHolder.cardView.startAnimation(fade_in);
-
     }
 
     @Override
